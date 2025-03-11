@@ -8,12 +8,12 @@ contract ObjectStorage {
     }
 
     mapping(uint256 => ObjectLog) public logs;
-    uint256 public logCount = 1; // Fix potential off-by-one error
+    uint256 public logCount = 1; 
 
     event ObjectStored(string objectName, uint256 timestamp);
 
     constructor() {
-        logCount = 1;  // Initialize logCount
+        logCount = 1;  
         emit ObjectStored("Contract Initialized", block.timestamp);
     }
 
